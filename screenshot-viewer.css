@@ -1,0 +1,17 @@
+.shot-viewer-open{overflow:hidden}
+.shot-viewer{position:fixed;inset:0;width:100%;height:100%;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:#e9eeeb;color:#172521;overflow:hidden}
+.shot-viewer[open]{display:grid;grid-template-rows:auto minmax(0,1fr)}
+.shot-toolbar{display:flex;align-items:center;gap:14px;padding:10px 18px;border-bottom:1px solid #cbd7cf;background:#fbfcfb}
+.shot-toolbar button{white-space:nowrap;border:1px solid #b2c4ba;border-radius:6px;background:white;color:#173d2e;padding:8px 11px;font:inherit;cursor:pointer}
+.shot-toolbar button:hover:not(:disabled),.shot-toolbar button[aria-pressed=true]{background:#e0efe6}
+.shot-toolbar button:disabled{opacity:.42;cursor:default}
+.shot-toolbar button:focus-visible,.shot-panel:focus-visible,.shot-scroll:focus-visible{outline:2px solid #176344;outline-offset:2px}
+.shot-heading{min-width:0;flex:1}.shot-heading h2{margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:17px}.shot-count{font-size:12px;color:#4b6357}.shot-controls{display:flex;gap:6px}
+.shot-scroll{overflow:auto;overscroll-behavior:contain;padding:12px 16px 24px}
+.shot-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:10px;max-width:2000px;margin:auto}
+.shot-panel{min-width:0;display:block;margin:0;padding:0;border:1px solid #c3d0c7;border-radius:7px;overflow:hidden;background:white;color:inherit;text-align:left;font:inherit}
+button.shot-panel{cursor:pointer}button.shot-panel:hover{border-color:#176344}
+.shot-active{border-color:#398060}.shot-label{display:block;padding:7px 10px;background:#f7faf8;border-bottom:1px solid #dce6df;font-size:13px;font-weight:650}
+.shot-active .shot-label{background:#dcefe3}.shot-panel img{display:block;width:100%;height:auto}
+.shot-row.is-zoomed{display:block;width:max-content;min-width:100%;max-width:none}.shot-row.is-zoomed .shot-panel{width:max-content;margin:auto}.shot-row.is-zoomed img{width:auto;max-width:none}
+@media(max-width:700px){.shot-toolbar{gap:7px;padding:7px 8px;flex-wrap:wrap}.shot-heading h2{font-size:14px}.shot-toolbar button{padding:7px 8px;font-size:13px}.shot-scroll{padding:6px 7px 18px}.shot-row{display:block}.shot-side{display:none}}
